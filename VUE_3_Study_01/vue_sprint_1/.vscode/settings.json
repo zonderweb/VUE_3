@@ -1,0 +1,23 @@
+{
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "comment.block",
+          "comment.line",
+          "keyword",
+          "keyword.control",
+          "storage",
+          "entity.name.type.class",
+          "entity.other.attribute-name",
+          "variable.parameter",
+          "variable.language"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  }
+}

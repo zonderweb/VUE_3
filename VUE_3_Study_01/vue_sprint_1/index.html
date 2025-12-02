@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vue Basics</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+
+<body>
+
+
+  <div class="container" id="app">
+    <div class="card">
+      <h1 :style="{
+        color: inputValue.length < 5 ? 'darkred' : 'darkblue',
+        fontSize: inputValue.length < 5 ? '2rem' : '2.5rem',
+      }">{{ title }}</h1>
+      <div class="form-control">
+        <input type="text" :placeholder="placeholderString" v-model="inputValue" @keypress.enter="addNewNote" />
+      </div>
+      <button class="btn" @click="addNewNote">Add</button>
+      <hr>
+
+      <ul class="list" v-if="notes.length !== 0">
+        <li class="list-item" v-for="(note, idx) in notes">
+          <!-- <span :class="note.length > 5 ? 'primary' : 'bold'">
+            {{ idx + 1 }} - {{ toUpperCase(note) }}
+          </span> -->
+
+          <span :class="['bold', {'primary' : note.length > 5}]">
+            {{ idx + 1 }} - {{ toUpperCase(note) }}
+          </span>
+          <button class="btn danger" v-on:click="removeNote(idx)">DEL</button>
+        </li>
+
+        <hr>
+
+        <li>
+          <b>Загальна кількість: {{ notes.length }}</b>
+          <i> | *2 - {{ doubleCountComputed }}</i>
+        </li>
+      </ul>
+      <div v-else>
+        <p>Notes 0 add first</p>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- https://youtu.be/1rRD9uMF92o?si=CCQ5S_sIokFfCBOE&t=7332 -->
