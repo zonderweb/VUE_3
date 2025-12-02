@@ -1,1 +1,9 @@
-console.log('vue_3');
+Vue.createApp({
+  data: () => ({
+    title: 'Data Title',
+  })
+
+
+
+
+}).mount('#app')
