@@ -79,3 +79,4 @@ jest-result.json
 .parcel-cache/
 
 # Optional: lockfiles SHOULD be committed — не додавай package-lock.json чи yarn.lock сюди
+.directory
