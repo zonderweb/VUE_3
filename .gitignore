@@ -1,0 +1,81 @@
+# Node modules (ігнорує в будь-якому рівні вкладеності)
+node_modules/
+**/node_modules/
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build / output
+dist/
+build/
+out/
+**/dist/
+**/build/
+
+# Vite / cache
+.vite
+.vite/
+node_modules/.vite
+.cache/
+.cache/
+.tmp/
+
+# Vue / Nuxt / other frameworks
+.nuxt/
+.nuxt/
+.nuxt/dist/
+.serverless/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Source maps (якщо не хочеш комітити .map)
+*.map
+
+# Environment files (не комітити секрети)
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# зберігай приклад конфігурації
+!.env.example
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test / coverage
+coverage/
+nyc_output/
+jest-result.json
+
+# Package manager caches / artifacts
+.pnpm-store/
+.pnpm-debug.log
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Misc
+*.tgz
+*.local
+*.log
+.eslintcache
+.parcel-cache/
+
+# Optional: lockfiles SHOULD be committed — не додавай package-lock.json чи yarn.lock сюди
