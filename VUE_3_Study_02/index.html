@@ -17,15 +17,30 @@
 <div class="container pt-5" id="app" v-cloak>
     <div class="card center">
         <div v-html="myHtml"></div>
-        <h2 v-text="title"></h2>
-        <h2 v-once>{{ title }}</h2>
-        <h2 v-pre>{{ title }}</h2>
+        <!--        <h2 v-text="title"></h2>-->
+        <!--        <h2 v-once>{{ title }}</h2>-->
+        <!--        <h2 v-pre>{{ title }}</h2>-->
 
-        <button
-                class="btn"
-                @click="title='now i change name'"
-        >Change Title Name
-        </button>
+        <!--        <button-->
+        <!--                class="btn"-->
+        <!--                @click="title='now i change name'"-->
+        <!--        >Change Title Name-->
+        <!--        </button>-->
+
+        <ul class="list">
+            <li
+                    class="list-item"
+                    v-for="(item, idx) in items"
+                    @click="items.splice(idx, 1)"
+            >
+                <b>{{ item }}</b>
+            </li>
+
+            <!--            <li class="list-item" v-for="(value, key) in person">-->
+            <!--                {{ key }} : <b>{{ value }}</b>-->
+            <!--            </li>-->
+        </ul>
+
     </div>
 </div>
 
@@ -35,4 +50,4 @@
 
 </html>
 
-// https://youtu.be/1rRD9uMF92o?si=39kVwH0VjcSUcqGx&t=8469
+<!--https://youtu.be/1rRD9uMF92o?si=jEntYeWkYn7x4PFj&t=8902-->
