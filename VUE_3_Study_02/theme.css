@@ -170,3 +170,12 @@ h3 {
     justify-content: space-between;
     padding: 0.5rem 0;
 }
+
+input {
+    padding: 8px;
+    font-size: 18px;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-weight: 500;
+}

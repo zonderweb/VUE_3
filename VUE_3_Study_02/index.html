@@ -27,13 +27,20 @@
         <!--        >Change Title Name-->
         <!--        </button>-->
 
+        <div class="form-control">
+            <input type="text" @keyup.enter="addItem" ref="myInput">
+        </div>
+
         <ul class="list" v-if="items.length">
             <li
                     class="list-item"
                     v-for="(item, idx) in items"
                     @click="items.splice(idx, 1)"
+                    :key="item"
             >
-                <b>{{ item }}</b>
+                <b>{{ item }}</b>&nbsp;
+
+                <input type="text" @click.stop>
             </li>
 
             <!--            <li class="list-item" v-for="(value, key) in person">-->
@@ -52,4 +59,4 @@
 
 </html>
 
-<!--https://youtu.be/1rRD9uMF92o?si=mpAj815sq856fDYg&t=9115-->
+<!--https://youtu.be/1rRD9uMF92o?si=p848I0NrkKTkJFE_&t=10475-->
