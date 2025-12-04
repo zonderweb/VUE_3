@@ -27,7 +27,7 @@
         <!--        >Change Title Name-->
         <!--        </button>-->
 
-        <ul class="list">
+        <ul class="list" v-if="items.length">
             <li
                     class="list-item"
                     v-for="(item, idx) in items"
@@ -41,6 +41,8 @@
             <!--            </li>-->
         </ul>
 
+        <!--        <h3 v-else>Element none</h3>-->
+        <h3 v-show="items.length === 0">Elements None</h3>
     </div>
 </div>
 
@@ -50,4 +52,4 @@
 
 </html>
 
-<!--https://youtu.be/1rRD9uMF92o?si=jEntYeWkYn7x4PFj&t=8902-->
+<!--https://youtu.be/1rRD9uMF92o?si=mpAj815sq856fDYg&t=9115-->
