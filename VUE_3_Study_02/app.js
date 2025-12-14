@@ -7,14 +7,22 @@ Vue.createApp({
 			lastName: 'Shimora',
 			age: 44
 		},
-		items: [1, 2]
+		items: [1, 2, 3, 4, 5, 6],
 	}),
 
 	methods: {
-		addItem() {
+		addItem(event) {
 			this.items.unshift(this.$refs.myInput.value)
 			this.$refs.myInput.value = ''
 		},
+
+		remove(idx) {
+			this.items.splice(idx, 1)
+		},
+
+		log(item) {
+			console.log('Log item: ', item)
+		}
 	},
 
 	computed: {

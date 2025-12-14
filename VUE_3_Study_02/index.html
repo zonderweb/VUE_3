@@ -35,7 +35,7 @@
             <li
                     class="list-item"
                     v-for="(item, idx) in items"
-                    @click="items.splice(idx, 1)"
+                    @click.right.prevent="remove(idx), log(item)"
                     :key="item"
             >
                 <b>{{ item }}</b>&nbsp;
@@ -59,4 +59,6 @@
 
 </html>
 
-<!--https://youtu.be/1rRD9uMF92o?si=p848I0NrkKTkJFE_&t=10475-->
+<!--
+https://youtu.be/1rRD9uMF92o?si=KIwdoLSONYUl8kUl&t=10772
+-->
